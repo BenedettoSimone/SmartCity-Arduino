@@ -17,8 +17,8 @@ Each feature will be explained in the dedicated sections.
 <br><br>
 ## STEPS
 ## Step 1: Box creation
-// insert image
-Two steps were performed to create the box. For the bottom base (left in photo), a 40cmx40cm square was cut out and 5cm high sides applied. To make the structure more solid, pieces of the 1.5cm x 1.5cm bar were cut out and applied in the corners. Fastening was done with wood glue and tacks. For the upper base (right in the photo), a 43cm x 43cm square was cut out , applying the sides and the 1.5cm x 1.5cm bar so that it would fit with the bottom base.
+<p align="center"><img src="./images/box_image.jpg"/></p>
+Two steps were performed to create the box. For the bottom base (left in photo), a 40cm x 40cm square was cut out and 5cm high sides applied. To make the structure more solid, pieces of the 1.5cm x 1.5cm bar were cut out and applied in the corners. Fastening was done with wood glue and tacks. For the upper base (right in the photo), a 43cm x 43cm square was cut out, applying the sides and the 1.5cm x 1.5cm bar so that it would fit with the bottom base.
 Finally, we painted the entire base with gray acrylic spray.
 
 
