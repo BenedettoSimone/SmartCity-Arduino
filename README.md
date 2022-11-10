@@ -9,6 +9,30 @@ This project treats the development of an IoT smart city using Arduino. The smar
 
 Each feature will be explained in the dedicated sections.
 
+## Getting started 🚀
+### 1. Install MQTT broker
+Installed the MQTT broker and we modify the file ```mosquitto.conf``` inserting the following lines to allow remote access:
+```
+listener 1885
+allow_anonymous true
+```
+### 2. Install Node-RED
+- Download and install [Node.js](https://nodejs.org/en/);
+- To ensure the correct installation run in the terminal:
+```
+node --version && npm –version
+```
+- Install Node-RED using: 
+```
+npm install -g --unsafe-perm node-red
+```
+- Execute:
+```
+node-red
+```
+- Now you can access to ```http://localhost:1880``` and you need to install the ```node-red-dashboard``` palette. 
+
+
 ## Materials used in the project 📝
 - Box:
   - 4mm thick plywood (1m x 1m);
@@ -32,26 +56,31 @@ Finally, we painted the entire base with gray acrylic spray.
 
 
 ## Step 2: Smart Parking wiring and code
-The various connections for building the smart parking lot have been divided for illustration purposes only. The first picture shows the components needed to detect the presence of a car in each lot. The second image shows the components needed for entry and exit in the parking lot equipped with a bar and how available and occupied spaces are shown.
+The various connections for building the smart parking lot have been divided for illustration purposes only. The first image shows the components needed to detect the presence of a car in each lot. The second image shows the components needed for entry and exit in the parking lot equipped with a bar and how available and occupied spaces are shown.
 
 <p align="center"><img src="./images/ParkingWiring.jpg"/></p>
 <p align="center"><img src="./images/ParkingEntryExitWiring.jpg"/></p>
 
+Library
+
 
 ## Step 3: Smart lighting wiring and code
+Library
 
 
 ## Step 4: Air quality monitoring wiring and code
-
+Library
 
 ## Step 5: Flood management wiring and code
-
+Library
 
 ## Step 6: Waste bucket management wiring and code
-
+Library
 
 
 ## Step 7: Create MQTT communication with Web Application
+
+
 
 
 
