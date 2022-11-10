@@ -38,28 +38,38 @@ The various connections for building the smart parking lot have been divided for
 <p align="center"><img src="./images/ParkingEntryExitWiring.jpg"/></p>
 
 
+## Step 3: Smart lighting wiring and code
+
+
+## Step 4: Air quality monitoring wiring and code
+
+
+## Step 5: Flood management wiring and code
+
+
+## Step 6: Waste bucket management wiring and code
+
+
+
+## Step 7: Create MQTT communication with Web Application
+
+
+
+## Step 8: Place all devices on the box model
 
 
 
 
+<br><br>
+## FINAL RESULT OF EACH SECTION
+
+## Smart lighting
+## Smart parking lots
+## Air quality monitoring
+## Flood management
+## Waste bucket management
 
 
-
-
-
-
-
-
-## Roadmap
-- Cover of final model
-- Introduction -> DONE
-- Materials used ->
-- How we build the box with photo -> DONE
-- Preparation step (locations for sensor)
-- Build the top for the model
-- Electronic part (for each scenario)
-- Final result (video)
-- Web App
 
 ## Developed with ❤️ by
 [Simone Benedetto](https://github.com/BenedettoSimone)<br>
