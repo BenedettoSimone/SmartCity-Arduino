@@ -10,9 +10,18 @@ This project treats the development of an IoT smart city using Arduino. The smar
 Each feature will be explained in the dedicated sections.
 
 ## Materials used in the project 📝
-- 4mm thick plywood (1m x 1m);
-- 1.5cm x 1.5cm bar (3.2m);
-- Gray acrylic spray;
+- Box:
+  - 4mm thick plywood (1m x 1m);
+  - 1.5cm x 1.5cm bar (3.2m);
+  - Gray acrylic spray;
+
+- Parking:
+  - 6 IR Infrared Obstacle Avoidance Sensor Module;
+  - 2 Light Sensor (Photoresistor);
+  - 2 Resistor 10k ohm;
+  - 2 KY-008 Laser Module;
+  - 1 Servo micro TowerPro sg90 9g;
+  - 1 8x8 Dot Led Matrix Module;
 
 <br><br>
 ## STEPS
@@ -22,6 +31,9 @@ Two steps were performed to create the box. For the bottom base (left in photo),
 Finally, we painted the entire base with gray acrylic spray.
 
 
+## Step 2: Smart Parking wiring and code
+<p align="center"><img src="./images/ParkingWiring.jpg"/></p>
+<p align="center"><img src="./images/ParkingEntryExitWiring.jpg"/></p>
 
 
 
