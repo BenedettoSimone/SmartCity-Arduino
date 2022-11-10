@@ -39,13 +39,21 @@ node-red
   - 1.5cm x 1.5cm bar (3.2m);
   - Gray acrylic spray;
 
-- Parking:
-  - 6 IR Infrared Obstacle Avoidance Sensor Module;
-  - 2 Light Sensor (Photoresistor);
-  - 2 Resistor 10k ohm;
-  - 2 KY-008 Laser Module;
-  - 1 Servo micro TowerPro sg90 9g;
-  - 1 8x8 Dot Led Matrix Module;
+- Smart Parking:
+  - IR Infrared Obstacle Avoidance Sensor Module (6x);
+  - Light Sensor (Photoresistor) (2x);
+  - Resistor 10k ohm (2x);
+  - KY-008 Laser Module (2x);
+  - Servo micro TowerPro sg90 9g;
+  - 8x8 Dot Led Matrix Module;
+  
+ - Smart Lighting:
+  - Light Sensor (Photoresistor);
+  - Resistor 10k ohm;
+  - Resistor 220 ohm (4x);
+  - LED 5mm (4x);
+ 
+ 
 
 <br><br>
 ## STEPS
