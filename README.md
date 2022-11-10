@@ -32,8 +32,11 @@ Finally, we painted the entire base with gray acrylic spray.
 
 
 ## Step 2: Smart Parking wiring and code
+The various connections for building the smart parking lot have been divided for illustration purposes only. The first picture shows the components needed to detect the presence of a car in each lot. The second image shows the components needed for entry and exit in the parking lot equipped with a bar and how available and occupied spaces are shown.
+
 <p align="center"><img src="./images/ParkingWiring.jpg"/></p>
 <p align="center"><img src="./images/ParkingEntryExitWiring.jpg"/></p>
+
 
 
 
