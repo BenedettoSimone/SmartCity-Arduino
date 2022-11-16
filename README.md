@@ -54,7 +54,7 @@ node-red
   - LED 5mm (4x);
 
 - Air Quality Monitoring:
-  - MQ135 Air Quality Sensor;
+  - MQ2 Air Quality Sensor;
  
  
 
