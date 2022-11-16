@@ -47,11 +47,14 @@ node-red
   - Servo micro TowerPro sg90 9g;
   - 8x8 Dot Led Matrix Module;
   
- - Smart Lighting:
+- Smart Lighting:
   - Light Sensor (Photoresistor);
   - Resistor 10k ohm;
   - Resistor 220 ohm (4x);
   - LED 5mm (4x);
+
+- Air Quality Monitoring:
+  - MQ135 Air Quality Sensor;
  
  
 
