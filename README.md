@@ -80,7 +80,8 @@ Library
 
 
 ## Step 4: Air quality monitoring wiring and code
-Library
+<p align="center"><img src="./images/AirQuality.jpg"/></p>
+
 
 ## Step 5: Flood management wiring and code
 Library
