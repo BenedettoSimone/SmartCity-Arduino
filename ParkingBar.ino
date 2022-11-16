@@ -15,7 +15,7 @@ void setup() {
 void loop() {
   
   // reads the input on analog pin A0 (value between 0 and 1023)
-  int analogValueEntry = analogRead(A0);
+  int analogValueEntry = analogRead(A2);
 
   //ENABLE THE FOLLOWING CODE TO CHECK THE ISOLATION OF THE LIGHT SENSOR
   /*
