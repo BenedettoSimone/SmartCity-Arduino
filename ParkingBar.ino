@@ -14,7 +14,7 @@ void setup() {
 
 void loop() {
   
-  // reads the input on analog pin A0 (value between 0 and 1023)
+  // reads the input on analog pin A2 (value between 0 and 1023)
   int analogValueEntry = analogRead(A2);
 
   //ENABLE THE FOLLOWING CODE TO CHECK THE ISOLATION OF THE LIGHT SENSOR
@@ -41,7 +41,7 @@ void loop() {
   // reads the input on analog pin A1 (value between 0 and 1023)
   int analogValueExit = analogRead(A1);
 
-   //ENABLE THE FOLLOWING CODE TO CHECK THE ISOLATION OF THE LIGHT SENSOR
+  //ENABLE THE FOLLOWING CODE TO CHECK THE ISOLATION OF THE LIGHT SENSOR
   /*
   Serial.print("Analog reading exit: ");
   Serial.print(analogValueExit);   // the raw analog reading
