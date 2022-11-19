@@ -38,7 +38,15 @@ node-red
   - 4mm thick plywood (1m x 1m);
   - 1.5cm x 1.5cm bar (3.2m);
   - Gray acrylic spray;
-
+  
+- Smart Lighting:
+  - Light Sensor (Photoresistor);
+  - Resistor 10k ohm;
+  - Resistor 220 ohm (2x);
+  - Yellow LED 5mm (6x);
+  - [Street lamp 3D Model](https://www.printables.com/it/model/213148-street-lamp-controlled-by-raspberry-pi-pico) (50% scaled);
+  - Solder Iron;
+  
 - Smart Parking:
   - IR Infrared Obstacle Avoidance Sensor Module (6x);
   - Light Sensor (Photoresistor) (2x);
@@ -46,14 +54,6 @@ node-red
   - KY-008 Laser Module (2x);
   - Servo micro TowerPro sg90 9g;
   - 8x8 Dot Led Matrix Module;
-  
-- Smart Lighting:
-  - Light Sensor (Photoresistor);
-  - Resistor 10k ohm;
-  - Resistor 220 ohm (2x);
-  - LED 5mm (6x);
-  - [Street lamp 3D Model](https://www.printables.com/it/model/213148-street-lamp-controlled-by-raspberry-pi-pico) (50% scaled);
-  - Solder Iron;
 
 - Air Quality Monitoring:
   - MQ2 Air Quality Sensor;
@@ -67,19 +67,16 @@ node-red
 Two steps were performed to create the box. For the bottom base (left in photo), a 40cm x 40cm square was cut out and 5cm high sides applied. To make the structure more solid, pieces of the 1.5cm x 1.5cm bar were cut out and applied in the corners. Fastening was done with wood glue and tacks. For the upper base (right in the photo), a 43cm x 43cm square was cut out, applying the sides and the 1.5cm x 1.5cm bar so that it would fit with the bottom base.
 Finally, we painted the entire base with gray acrylic spray.
 
+## Step 2: Smart lighting wiring and code
+<p align="center"><img src="./images/SmartLighting.jpeg"/></p>
 
-## Step 2: Smart Parking wiring and code
+## Step 3: Smart Parking wiring and code
 The various connections for building the smart parking lot have been divided for illustration purposes only. The first image shows the components needed to detect the presence of a car in each lot. The second image shows the components needed for entry and exit in the parking lot equipped with a bar and how available and occupied spaces are shown.
 
 <p align="center"><img src="./images/ParkingWiring.jpg"/></p>
 <p align="center"><img src="./images/ParkingEntryExitWiring.jpg"/></p>
 
 Library
-
-
-## Step 3: Smart lighting wiring and code
-Library
-
 
 ## Step 4: Air quality monitoring wiring and code
 <p align="center"><img src="./images/AirQuality.jpg"/></p>
