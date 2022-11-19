@@ -50,8 +50,10 @@ node-red
 - Smart Lighting:
   - Light Sensor (Photoresistor);
   - Resistor 10k ohm;
-  - Resistor 220 ohm (4x);
-  - LED 5mm (4x);
+  - Resistor 220 ohm (2x);
+  - LED 5mm (6x);
+  - [Street lamp 3D Model](https://www.printables.com/it/model/213148-street-lamp-controlled-by-raspberry-pi-pico) (50% scaled);
+  - Solder Iron;
 
 - Air Quality Monitoring:
   - MQ2 Air Quality Sensor;
