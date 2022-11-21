@@ -30,7 +30,7 @@ npm install -g --unsafe-perm node-red
 ```
 node-red
 ```
-- Now you can access to ```http://localhost:1880``` and you need to install the ```node-red-dashboard``` palette. 
+- Now you can access to ``http://localhost:1880`` and you need to install the ``node-red-dashboard`` palette. 
 
 
 ## Materials used in the project 📝
@@ -67,35 +67,45 @@ node-red
 Two steps were performed to create the box. For the bottom base (left in photo), a 40cm x 40cm square was cut out and 5cm high sides applied. To make the structure more solid, pieces of the 1.5cm x 1.5cm bar were cut out and applied in the corners. Fastening was done with wood glue and tacks. For the upper base (right in the photo), a 43cm x 43cm square was cut out, applying the sides and the 1.5cm x 1.5cm bar so that it would fit with the bottom base.
 Finally, we painted the entire base with gray acrylic spray.
 
-## Step 2: Smart lighting wiring and code
+## Step 2: Single sections wiring and code
+### 2.1: Smart lighting
 <p align="center"><img src="./images/SmartLighting.jpeg"/></p>
 
-## Step 3: Smart Parking wiring and code
+The code for this section is available in the folder ``folder``.
+
+
+### 2.2: Smart Parking
 The various connections for building the smart parking lot have been divided for illustration purposes only. The first image shows the components needed to detect the presence of a car in each lot. The second image shows the components needed for entry and exit in the parking lot equipped with a bar and how available and occupied spaces are shown.
 
 <p align="center"><img src="./images/ParkingWiring.jpg"/></p>
 <p align="center"><img src="./images/ParkingEntryExitWiring.jpg"/></p>
 
+The code for this section is available in the folder ``folder``.
+
 Library
 
-## Step 4: Air quality monitoring wiring and code
+### 2.3: Air quality monitoring
 <p align="center"><img src="./images/AirQuality.jpg"/></p>
 
+The code for this section is available in the folder ``folder``.
 
-## Step 5: Flood management wiring and code
+
+### 2.4: Flood management
+The code for this section is available in the folder ``folder``.
 Library
 
-## Step 6: Waste bucket management wiring and code
+### 2.5: Waste bucket management
+The code for this section is available in the folder ``folder``.
 Library
 
 
-## Step 7: Create MQTT communication with Web Application
+## Step 3: Create MQTT communication with Web Application
 
 
 
 
 
-## Step 8: Place all devices on the box model
+## Step 4: Place all devices on the box model
 
 
 
