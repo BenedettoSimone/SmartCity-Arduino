@@ -11,7 +11,7 @@ Each feature will be explained in the dedicated sections.
 
 ## Getting started 🚀
 ### 1. Install MQTT broker
-Installed the MQTT broker and we modify the file ```mosquitto.conf``` inserting the following lines to allow remote access:
+Install the MQTT broker and modify the file ```mosquitto.conf``` inserting the following lines to allow remote access:
 ```
 listener 1885
 allow_anonymous true
@@ -118,6 +118,11 @@ Library
 ## Air quality monitoring
 ## Flood management
 ## Waste bucket management
+
+
+TODO LIST
+- [ ] Create "single_sections_code" folder and insert all the scripts;
+- [ ] Step 3: insert mqtt topic scheme, MQTT code on Arduino, node-red flow;
 
 
 
