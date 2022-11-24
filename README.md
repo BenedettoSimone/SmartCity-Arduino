@@ -100,9 +100,52 @@ Library
 
 
 ## Step 3: Create MQTT communication with Web Application
+## 3.1 Topics and messages format
+As first step, we estabilished all the topics for the communication:
+-  ``topic/street_lights``
+-  ``topic/air_quality``
+-  ``topic/flood_management``
+-  ``topic/parking``
 
+Next, we specified the message format as follows:
 
+```
+STREET LIGHTS: 
 
+--- {lights_status: value},
+
+where "value" can be "0" if the lights are OFF, and "1" if they are ON.
+
+```
+
+```
+AIR QUALITY MONITORING: 
+
+--- {air_quality_status: value},
+
+where "value" can be "0" if the air quality is GOOD, and "1" if it is BAD.
+
+```
+
+```
+FLOOD MANAGEMENT: 
+
+--- {flood_status: value},
+
+where "value" is the water level.
+
+```
+
+```
+PARKING: 
+
+--- {free: value, slot1: status, slot2: status, slot3: status, slot4: status, slot5: status, slot6: status},
+
+where "value" is the number of free slots and "status" that can be "0" if the slot is free, "1" if it is busy.
+
+```
+## 3.2 Publish messages using Arduino
+## 3.3 Receive messages using a Web Application
 
 
 ## Step 4: Place all devices on the box model
