@@ -77,9 +77,7 @@ node-red
 - Air Quality Monitoring:
   - MQ2 Air Quality Sensor;
  
- 
 
-<br><br>
 ## Step 1: Box creation
 <p align="center"><img src="./images/box_image.jpg"/></p>
 Two steps were performed to create the box. For the bottom base (left in photo), a 40cm x 40cm square was cut out and 5cm high sides applied. To make the structure more solid, pieces of the 1.5cm x 1.5cm bar were cut out and applied in the corners. Fastening was done with wood glue and tacks. For the upper base (right in the photo), a 43cm x 43cm square was cut out, applying the sides and the 1.5cm x 1.5cm bar so that it would fit with the bottom base.
@@ -118,7 +116,7 @@ Library
 
 
 ## Step 3: Create MQTT communication with Web Application
-## 3.1 Topics and messages format
+### 3.1 Topics and messages format
 As first step, we estabilished all the topics for the communication:
 -  ``topic/street_lights``
 -  ``topic/air_quality``
@@ -162,8 +160,8 @@ PARKING:
 where "value" is the number of free slots and "status" that can be "0" if the slot is free, "1" if it is busy.
 
 ```
-## 3.2 Publish messages using Arduino
-## 3.3 Receive messages using a Web Application
+### 3.2 Publish messages using Arduino
+### 3.3 Receive messages using a Web Application
 To built the Web Application to receive and display messages, we used Node Red. The flow is ``flow.json``. The node configuration on Node Red consists of 5 nodes that receive messages from Arduino and are displayed in custom templates. The "template" node named ``custom_template`` was used to customize the style of the dashboard.
 
 <p align="center"><img src="./images/dashboard.jpg"/></p>
