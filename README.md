@@ -162,7 +162,7 @@ where "value" is the number of free slots and "status" that can be "0" if the sl
 ```
 ### 3.2 Publish messages using Arduino
 ### 3.3 Receive messages using a Web Application
-To built the Web Application to receive and display messages, we used Node Red. The flow is ``flow.json``. The node configuration on Node Red consists of 5 nodes that receive messages from Arduino and are displayed in custom templates. The "template" node named ``custom_template`` was used to customize the style of the dashboard.
+To built the Web Application to receive and display messages, we used Node Red. The flow is ``flows.json``. The node configuration on Node Red consists of 5 nodes that receive messages from Arduino and are displayed in custom templates. The "template" node named ``custom_template`` was used to customize the style of the dashboard.
 
 <p align="center"><img src="./images/dashboard.jpg"/></p>
 
