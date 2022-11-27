@@ -76,7 +76,7 @@ Finally, we painted the entire base with gray acrylic spray.
 ### 2.1: Smart lighting
 <p align="center"><img src="./images/SmartLighting.jpeg"/></p>
 
-The code for this section is available in the folder ``folder``.
+The code for this section is available in the folder ``single_sections_code/StreetLights``.
 
 
 ### 2.2: Smart Parking
@@ -85,7 +85,7 @@ The various connections for building the smart parking lot have been divided for
 <p align="center"><img src="./images/ParkingWiring.jpg"/></p>
 <p align="center"><img src="./images/ParkingEntryExitWiring.jpg"/></p>
 
-The code for this section is available in the folder ``folder``.
+The code for this section is available in the folders ``single_sections_code/Parking`` and ``single_sections_code/ParkingBar``.
 
 Library
 
