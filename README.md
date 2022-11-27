@@ -11,7 +11,21 @@ Each feature will be explained in the dedicated sections.
 
 ## Table of contents
 * [Getting started](#getting-started-)
-  * [title]
+  * [1. Install MQTT broker](#1-install-mqtt-broker)
+  * [2. Install Node-RED](#2-install-node-red)
+* [Materials used in the project](#materials-used-in-the-project-)
+* [Step 1: Box creation](#step-1-box-creation)
+* [Step 2: Single sections wiring and code](#step-2-single-sections-wiring-and-code)
+  * [2.1: Smart lighting](#21-smart-lighting)
+  * [2.2: Smart Parking](#22-smart-parking)
+  * [2.3: Air quality monitoring](#23-air-quality-monitoring)
+  * [2.4: Flood management](#24-flood-management)
+  * [2.5: Waste bucket management](#25-waste-bucket-management)
+* [Step 3: Create MQTT communication with Web Application](#step-3-create-mqtt-communication-with-web-application)
+  * [3.1 Topics and messages format](#31-topics-and-messages-format)
+  * [3.2 Publish messages using Arduino](#32-publish-messages-using-arduino)
+  * [3.3 Receive messages using a Web Application](#33-receive-messages-using-a-web-application)
+* [Step 4: Place all devices on the box model](#step-4-place-all-devices-on-the-box-model) 
 
 
 ## Getting started 🚀
@@ -66,7 +80,6 @@ node-red
  
 
 <br><br>
-## Steps
 ## Step 1: Box creation
 <p align="center"><img src="./images/box_image.jpg"/></p>
 Two steps were performed to create the box. For the bottom base (left in photo), a 40cm x 40cm square was cut out and 5cm high sides applied. To make the structure more solid, pieces of the 1.5cm x 1.5cm bar were cut out and applied in the corners. Fastening was done with wood glue and tacks. For the upper base (right in the photo), a 43cm x 43cm square was cut out, applying the sides and the 1.5cm x 1.5cm bar so that it would fit with the bottom base.
