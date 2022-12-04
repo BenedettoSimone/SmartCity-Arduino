@@ -110,6 +110,8 @@ The code for this section is available in the folder ``single_sections_code/AirQ
 
 
 ### 2.4: Flood management
+<p align="center"><img src="./images/FloodManagement.jpg"/></p>
+
 The code for this section is available in the folder ``single_sections_code/FloodManagement``.
 
 
