@@ -76,6 +76,9 @@ node-red
 
 - Air Quality Monitoring:
   - MQ2 Air Quality Sensor;
+  
+- Flood management:
+  - Water Sensor;
  
 
 ## Step 1: Box creation
@@ -103,12 +106,12 @@ Library
 ### 2.3: Air quality monitoring
 <p align="center"><img src="./images/AirQuality.jpg"/></p>
 
-The code for this section is available in the folder ``folder``.
+The code for this section is available in the folder ``single_sections_code/AirQuality``.
 
 
 ### 2.4: Flood management
-The code for this section is available in the folder ``folder``.
-Library
+The code for this section is available in the folder ``single_sections_code/FloodManagement``.
+
 
 ### 2.5: Waste bucket management
 The code for this section is available in the folder ``folder``.
