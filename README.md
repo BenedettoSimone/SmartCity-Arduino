@@ -29,13 +29,19 @@ Each feature will be explained in the dedicated sections.
 
 
 ## Getting started 🚀
-### 1. Install MQTT broker
+Since our smart sensors can communicate, using MQTT, with a web-application built with Node-Red, we need to setup the enviroment. In our project we used a RasperryPi 3 to host the MQTT broker and the web-application, but it's possible also to host them on your pc.
+
+## 1. Host over RasperryPi 3
+As first step you need to do the initial setup for the RaspberryPi.
+
+## 2. Host on your PC
+### 2.1 - Install MQTT broker
 Install the MQTT broker and modify the file ```mosquitto.conf``` inserting the following lines to allow remote access:
 ```
 listener 1885
 allow_anonymous true
 ```
-### 2. Install Node-RED
+### 2.2 - Install Node-RED
 - Download and install [Node.js](https://nodejs.org/en/);
 - To ensure the correct installation run in the terminal:
 ```
@@ -50,7 +56,6 @@ npm install -g --unsafe-perm node-red
 node-red
 ```
 - Now you can access to ``http://localhost:1880`` and you need to install the ``node-red-dashboard`` palette. 
-
 
 ## Materials used in the project 📝
 - Box:
