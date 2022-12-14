@@ -11,8 +11,8 @@ Each feature will be explained in the dedicated sections.
 
 ## Table of contents
 * [Getting started](#getting-started-)
-  * [1. Install MQTT broker](#1-install-mqtt-broker)
-  * [2. Install Node-RED](#2-install-node-red)
+  * [1. Host over RaspberryPi 3](#1-host-over-raspberrypi-3)
+  * [2. Host on your PC](#2-host-on-your-pc)
 * [Materials used in the project](#materials-used-in-the-project-)
 * [Step 1: Box creation](#step-1-box-creation)
 * [Step 2: Single sections wiring and code](#step-2-single-sections-wiring-and-code)
@@ -29,10 +29,16 @@ Each feature will be explained in the dedicated sections.
 
 
 ## Getting started 🚀
-Since our smart sensors can communicate, using MQTT, with a web-application built with Node-Red, we need to setup the enviroment. In our project we used a RasperryPi 3 to host the MQTT broker and the web-application, but it's possible also to host them on your pc.
+Since our smart sensors can communicate, using MQTT, with a web-application built with Node-Red, we need to setup the enviroment. In our project we used a RaspberryPi 3 to host the MQTT broker and the web-application, but it's possible also to host them on your pc.
 
-## 1. Host over RasperryPi 3
+## 1. Host over RaspberryPi 3
 As first step you need to do the initial setup for the RaspberryPi.
+*  Insert a microSD card / reader into your computer.  
+*  Download and install the official [Raspberry Pi Imager](https://www.raspberrypi.com/software/). 
+*  Run the Imager program, choose the OS as Raspberry Pi OS (32-bit), choose the SD card and write the image. 
+
+### 1.1 - Install MQTT broker
+### 1.2 - Install Node-RED
 
 ## 2. Host on your PC
 ### 2.1 - Install MQTT broker
