@@ -38,6 +38,14 @@ As first step you need to do the initial setup for the RaspberryPi.
 *  Run the Imager program, choose the OS as Raspberry Pi OS (32-bit), choose the SD card and write the image. 
 
 ### 1.1 - Install MQTT broker
+
+apt-get install mosquitto
+
+sudo /etc/init.d/mosquitto stop
+sudo nano /etc/mosquitto/mosquitto.conf
+
+sudo systemctl enable mosquitto
+sudo systemctl start mosquitto
 ### 1.2 - Install Node-RED
 sudo apt install build-essential git curl
 
