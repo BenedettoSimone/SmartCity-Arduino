@@ -39,6 +39,11 @@ As first step you need to do the initial setup for the RaspberryPi.
 
 ### 1.1 - Install MQTT broker
 ### 1.2 - Install Node-RED
+sudo apt install build-essential git curl
+
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+
+sudo systemctl enable nodered.service
 
 ## 2. Host on your PC
 ### 2.1 - Install MQTT broker
