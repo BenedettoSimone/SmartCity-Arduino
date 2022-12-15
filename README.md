@@ -38,21 +38,34 @@ As first step you need to do the initial setup for the RaspberryPi.
 *  Run the Imager program, choose the OS as Raspberry Pi OS (32-bit), choose the SD card and write the image. 
 
 ### 1.1 - Install MQTT broker
-
+Install the MQTT broker.
+```
 apt-get install mosquitto
-
+```
+To modify the config file use:
+```
 sudo /etc/init.d/mosquitto stop
 sudo nano /etc/mosquitto/mosquitto.conf
-
+```
+To autostart on boot use:
+```
 sudo systemctl enable mosquitto
 sudo systemctl start mosquitto
+```
+
 ### 1.2 - Install Node-RED
+First, you need to check that npm is able to fetch and build any binary modules it needs to install.
+```
 sudo apt install build-essential git curl
-
+```
+With the following command you can install Node.js, npm and Node-RED.
+```
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
-
+```
+To set the autostart on boot use:
+```
 sudo systemctl enable nodered.service
-
+```
 ## 2. Host on your PC
 ### 2.1 - Install MQTT broker
 Install the MQTT broker and modify the file ```mosquitto.conf``` inserting the following lines to allow remote access:
@@ -190,6 +203,14 @@ where "value" is the number of free slots and "status" that can be "0" if the sl
 
 ```
 ### 3.2 Publish messages using Arduino
+To publish messages using Arduino we need to install the following libraries:
+* [WiFiNINA](https://www.arduino.cc/reference/en/libraries/wifinina/);
+* [PubSubClient](https://www.arduino.cc/reference/en/libraries/pubsubclient/).
+
+All the scripts to send messages are in the folder ``single_sections_code_mqtt``.
+
+
+
 ### 3.3 Receive messages using a Web Application
 To built the Web Application to receive and display messages, we used Node Red. The flow is ``flows.json``. The node configuration on Node Red consists of 5 nodes that receive messages from Arduino and are displayed in custom templates. The "template" node named ``custom_template`` was used to customize the style of the dashboard.
 
