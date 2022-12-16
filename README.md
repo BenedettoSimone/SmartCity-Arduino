@@ -155,7 +155,9 @@ The various connections for building the smart parking lot have been divided for
 
 The code for this section is available in the folders ``single_sections_code/Parking`` and ``single_sections_code/ParkingBar``.
 
-Library
+To use this code you need to install these libraries:
+* [Servo](https://www.arduino.cc/reference/en/libraries/servo/);
+* [LedControl](https://www.arduinolibraries.info/libraries/led-control).
 
 ### 2.3: Air quality monitoring
 <p align="center"><img src="./images/AirQuality.jpg"/></p>
