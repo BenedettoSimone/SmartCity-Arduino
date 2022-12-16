@@ -66,6 +66,23 @@ To set the autostart on boot use:
 ```
 sudo systemctl enable nodered.service
 ```
+Now you can access to ``http://localhost:1880`` and you need to install the ``node-red-dashboard`` palette. Import the ``flows.json`` file. 
+
+You also need to set the static images. To do that go in the ``./node-red`` folder, and modify the file ``settings.js`` with the following line: 
+```javascript
+...
+    // When httpAdminRoot is used to move the UI to a different root path, the
+    // following property can be used to identify a directory of static content
+    // that should be served at http://localhost:1880/.
+    // httpStatic: '/home/nol/node-red-static/',
+    httpStatic: 'home/{{userName}}/.node-red/static' 
+...
+
+```
+After, create the ``static`` folder in ``home/{{userName}}/.node-red``, putting inside all the pictures inside the folder ``dashboard_images``.
+
+Finally restart your node-red.
+
 ## 2. Host on your PC
 ### 2.1 - Install MQTT broker
 Install the MQTT broker and modify the file ```mosquitto.conf``` inserting the following lines to allow remote access:
@@ -87,7 +104,7 @@ npm install -g --unsafe-perm node-red
 ```
 node-red
 ```
-- Now you can access to ``http://localhost:1880`` and you need to install the ``node-red-dashboard`` palette. 
+- Now you can access to ``http://localhost:1880`` and you need to install the ``node-red-dashboard`` palette. NB: you need to import the flow and set the static images.
 
 ## Materials used in the project 📝
 - Box:
