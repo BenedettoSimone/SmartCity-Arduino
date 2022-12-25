@@ -1,5 +1,4 @@
 #include "LedControl.h"
-#include "binary.h"
 
 const int pir1 = 2; // input pin (IR LED parking space 1)
 const int pir2 = 3; // input pin (IR LED parking space 2)
@@ -113,6 +112,8 @@ void loop() {
     Serial.println("Parking space 6 FREE");
   }
 
+  delay(1000);
+
 
 }
 
@@ -124,29 +125,30 @@ void setPlace(int number, boolean state){
   
   switch(number){
     case 1 :
-      row = 0; column = 0; break;
+      row = 6; column = 5; break;
 
     case 2 :
-      row = 0; column = 3; break;
-      
+      row = 3; column = 5; break;
+
     case 3 :
-      row = 0; column = 6; break; 
+      row = 0; column = 5; break;
 
     case 4 :
-      row = 5; column = 0; break;
+      row = 0; column = 0; break;
 
     case 5 :
-      row = 5; column = 3; break;
+      row = 3; column = 0; break;
 
     case 6 :
-      row = 5; column = 6; break;
+      row = 6; column = 0; break;
   
   }
   
   lc.setLed(0,row,column,state);
   lc.setLed(0,row,column+1,state);
+  lc.setLed(0,row,column+2,state);
+
   lc.setLed(0,row+1,column,state);
   lc.setLed(0,row+1,column+1,state);
-  lc.setLed(0,row+2,column,state);
-  lc.setLed(0,row+2,column+1,state);
+  lc.setLed(0,row+1,column+2,state);
 }
