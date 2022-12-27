@@ -5,7 +5,6 @@ This project treats the development of an IoT smart city using Arduino. The smar
 - Smart parking lots;
 - Air quality monitoring;
 - Flood management;
-- Waste bucket management;
 
 Each feature will be explained in the dedicated sections.
 
@@ -20,7 +19,6 @@ Each feature will be explained in the dedicated sections.
   * [2.2: Smart Parking](#22-smart-parking)
   * [2.3: Air quality monitoring](#23-air-quality-monitoring)
   * [2.4: Flood management](#24-flood-management)
-  * [2.5: Waste bucket management](#25-waste-bucket-management)
 * [Step 3: Create MQTT communication with Web Application](#step-3-create-mqtt-communication-with-web-application)
   * [3.1 Topics and messages format](#31-topics-and-messages-format)
   * [3.2 Publish messages using Arduino](#32-publish-messages-using-arduino)
@@ -171,11 +169,6 @@ The code for this section is available in the folder ``single_sections_code/AirQ
 The code for this section is available in the folder ``single_sections_code/FloodManagement``.
 
 
-### 2.5: Waste bucket management
-The code for this section is available in the folder ``folder``.
-Library
-
-
 ## Step 3: Create MQTT communication with Web Application
 ### 3.1 Topics and messages format
 As first step, we estabilished all the topics for the communication:
@@ -247,7 +240,6 @@ To built the Web Application to receive and display messages, we used Node Red. 
 ## Smart parking lots
 ## Air quality monitoring
 ## Flood management
-## Waste bucket management
 
 ## Developed with ❤️ by
 [Simone Benedetto](https://github.com/BenedettoSimone)<br>
