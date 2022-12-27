@@ -4,8 +4,8 @@
 #include <PubSubClient.h>
 
 
-const char* ssid = "TP-LINK_4C7972";
-const char* password = "47086364";
+const char* ssid = "";
+const char* password = "";
 
 const char* mqtt_server = "192.168.1.22";
 const int mqtt_port = 1885; //default 1883 
