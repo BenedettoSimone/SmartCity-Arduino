@@ -1,11 +1,8 @@
 int sensor = A0;
 int A0_value= 0;
-int ledPin = 13;
 
 void setup() {
   // put your setup code here, to run once:
-
-  pinMode(ledPin, OUTPUT);
   Serial.begin (9600);
 
 }

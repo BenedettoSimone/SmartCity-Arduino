@@ -13,20 +13,20 @@ void setup() {
 void loop() {
   
   // reads the input on analog pin A3 (value between 0 and 1023)
-  int analogValueEntry = analogRead(A3);
+  int analogValue = analogRead(A3);
 
-  Serial.print("Analog reading entry: ");
-  Serial.print(analogValueEntry);   // the raw analog reading
+  Serial.print("Analog reading: ");
+  Serial.print(analogValue);   // the raw analog reading
 
   /*
   // We'll have a few threshholds, qualitatively determined
-  if (analogValueEntry < 10) {
+  if (analogValue < 10) {
     Serial.println(" - Dark");
-  } else if (analogValueEntry < 200) {
+  } else if (analogValue < 200) {
     Serial.println(" - Dim");
-  } else if (analogValueEntry < 500) {
+  } else if (analogValue < 500) {
     Serial.println(" - Light");
-  } else if (analogValueEntry < 800) {
+  } else if (analogValue < 800) {
     Serial.println(" - Bright");
   } else {
     Serial.println(" - Very bright");
@@ -34,7 +34,7 @@ void loop() {
 
   */
 
-  if (analogValueEntry < 200){
+  if (analogValue < 200){
     // Dark
     digitalWrite(LED_PIN_1, HIGH);
     digitalWrite(LED_PIN_2, HIGH);

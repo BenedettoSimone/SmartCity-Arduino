@@ -15,7 +15,6 @@ int sensorOut4 = HIGH;
 int sensorOut5 = HIGH;
 int sensorOut6 = HIGH;
 
-//const int numDevices = 4;
 const int numDevices = 1;
 
 unsigned long delaytime = 1000;
@@ -125,14 +124,14 @@ void setPlace(int number, boolean state){
   
   switch(number){
     case 1 :
-      row = 6; column = 5; break;
-
+      row = 0; column = 5; break;
+    
     case 2 :
       row = 3; column = 5; break;
-
+    
     case 3 :
-      row = 0; column = 5; break;
-
+      row = 6; column = 5; break;
+    
     case 4 :
       row = 0; column = 0; break;
 
