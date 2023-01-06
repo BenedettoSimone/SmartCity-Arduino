@@ -32,6 +32,8 @@ int sensorOut4 = HIGH;
 int sensorOut5 = HIGH;
 int sensorOut6 = HIGH;
 
+//set it to 1 if i can execute the count
+int flag = 0;
 int freeSlots = 6;
 
 
@@ -63,6 +65,8 @@ void setup() {
   lc.setIntensity(0,8);
   lc.clearDisplay(0);
 
+  
+
   WiFi.begin(ssid, password);
   
   // Start WiFi connection: 
@@ -83,6 +87,7 @@ void setup() {
   if (!client.connected()) {
     reconnect();
   }
+  
 }
 
 void loop() {
@@ -90,28 +95,44 @@ void loop() {
   //lc.clearDisplay(0);
   
   // reads the input on analog pin A2 (value between 0 and 1023)
-  int analogValueEntry = analogRead(A2);
+  int analogValueEntry = analogRead(A1);
 
   // reads the input on analog pin A1 (value between 0 and 1023)
-  int analogValueExit = analogRead(A1);
+  int analogValueExit = analogRead(A2);
 
   
-  
   if(analogValueEntry < 800 && analogValueExit > 800){
-    Serial.println("Entry: open the bar.");
-    servo.write(110);
-    freeSlots--;
+    if(freeSlots > 0){
+
+      Serial.println("Entry: open the bar.");
+      servo.write(110);
+      
+      if(flag == 0){
+        flag = 1;
+        freeSlots--;
+      }
+    }
+    
   }else if (analogValueEntry > 800 && analogValueExit < 800){
     Serial.println("Exit: open the bar.");
     servo.write(110);
-    freeSlots++;
+    
+    if(flag == 0){
+      flag = 1;
+      freeSlots++;
+    }
+   
   }else if (analogValueEntry < 800 && analogValueExit < 800){
     Serial.println("Leave the bar open");
     servo.write(110);
   }else{
     Serial.println("Leave the bar closed or close it");
     servo.write(150);
+    flag = 0;
   }
+  
+  
+  Serial.println(freeSlots);
 
 
   //parking space 1
@@ -185,7 +206,7 @@ void loop() {
 
   str = "{\"free\":"+String(freeSlots)+", \"slot1\":"+String(sensorOut1)+", \"slot2\":"+String(sensorOut2)+", \"slot3\":"+String(sensorOut3)+", \"slot4\":"+String(sensorOut4)+", \"slot5\":"+String(sensorOut5)+", \"slot6\": "+String(sensorOut6)+"}";
 
-  sendMessage(str);
+  //sendMessage(str);
 
   delay(500);
 
