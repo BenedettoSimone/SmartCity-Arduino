@@ -1,6 +1,6 @@
 /* Street lights program. */
 
-
+#include <WiFiNINA.h>
 #include <PubSubClient.h>
 
 const char* ssid = "";
