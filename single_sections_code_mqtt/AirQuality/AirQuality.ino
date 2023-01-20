@@ -59,11 +59,11 @@ void loop() {
   Serial.print(A0_value, DEC);
 
   //Low noise 
-  if(A0_value >550){
+  if(A0_value > 270){
     Serial.print(A0_value);
-    str = "{\"air_quality_status\":BAD}";
+    str = "{\"air_quality_status\": 1}";
   }else{
-    str = "{\"air_quality_status\":GOOD}";
+    str = "{\"air_quality_status\": 0 }";
   }
   
   sendMessage(str);
