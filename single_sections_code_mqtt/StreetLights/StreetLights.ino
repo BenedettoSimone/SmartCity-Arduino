@@ -79,13 +79,13 @@ void loop() {
     digitalWrite(LED_PIN_1, HIGH);
     digitalWrite(LED_PIN_2, HIGH);
     
-    str = "{\"light_status\": 1}";
+    str = "{\"lights_status\": 1}";
 
   } else {
     digitalWrite(LED_PIN_1, LOW);
     digitalWrite(LED_PIN_2, LOW);
     
-    str = "{\"light_status\": 0}";
+    str = "{\"lights_status\": 0}";
   }
    
   sendMessage(str);
