@@ -211,7 +211,7 @@ PARKING:
 
 --- {free: value, slot1: status, slot2: status, slot3: status, slot4: status, slot5: status, slot6: status},
 
-where "value" is the number of free slots and "status" that can be "0" if the slot is free, "1" if it is busy.
+where "value" is the number of free slots and "status" that can be "1" if the slot is free, "0" if it is busy.
 
 ```
 ### 3.2 Publish messages using Arduino
