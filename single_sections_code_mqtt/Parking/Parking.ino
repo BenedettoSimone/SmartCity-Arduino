@@ -204,9 +204,9 @@ void loop() {
     Serial.println("Parking space 6 FREE");
   }
 
-  str = "{\"free\":"+String(freeSlots)+", \"slot1\":"+String(sensorOut1)+", \"slot2\":"+String(sensorOut2)+", \"slot3\":"+String(sensorOut3)+", \"slot4\":"+String(sensorOut4)+", \"slot5\":"+String(sensorOut5)+", \"slot6\": "+String(sensorOut6)+"}";
+  str = "{\"free\":"+String(freeSlots)+", \"slot1\":"+String(!sensorOut1)+", \"slot2\":"+String(!sensorOut2)+", \"slot3\":"+String(!sensorOut3)+", \"slot4\":"+String(!sensorOut4)+", \"slot5\":"+String(!sensorOut5)+", \"slot6\": "+String(!sensorOut6)+"}";
 
-  //sendMessage(str);
+  sendMessage(str);
 
   delay(500);
 
