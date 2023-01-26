@@ -231,8 +231,12 @@ To built the Web Application to receive and display messages, we used Node Red. 
 
 <p align="center"><img src="./images/dashboard.jpg"/></p>
 
-## Step 4: Place all devices on the box model
+The final result is showed in the next picture. 
+<p align="center"><img src="./images/dashboard-deploy.png"/></p> 
 
+## Step 4: Place all devices on the box model
+We connected each sensor to an Arduino WIFI REV 2. 
+<p align="center"><img src="./images/box_wiring.jpg"/></p>
 
 
 
