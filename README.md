@@ -1,4 +1,6 @@
-# SmartCity-Arduino 🏙
+# Smart City with Arduino 🏙
+
+<p align="center"><img src="./images/cover.png"/></p>
 
 This project treats the development of an IoT smart city using Arduino. The smart city will be equipped with the following functionalities:
 - Smart lighting;
