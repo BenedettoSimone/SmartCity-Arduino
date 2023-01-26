@@ -131,6 +131,7 @@ node-red
   
 - Flood management:
   - Water Sensor;
+  - Water pump 5V;
  
 
 ## Step 1: Box creation
