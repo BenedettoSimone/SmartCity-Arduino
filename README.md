@@ -4,7 +4,7 @@
 
 This project treats the development of an IoT smart city using Arduino. The smart city will be equipped with the following functionalities:
 - Smart lighting;
-- Smart parking lots;
+- Smart parking;
 - Air quality monitoring;
 - Flood management;
 
@@ -244,8 +244,17 @@ We connected each sensor to an Arduino WIFI REV 2.
 ## FINAL RESULT OF EACH SECTION
 
 ## Smart lighting
-## Smart parking lots
+
+
+## Smart parking
+When the car attempts to enter the parking area, the bar will only open if there are spaces available. When the car occupies a certain slot it will be shown on the LED matrix which slot has been occupied.  During the procedure all information will be shown on the dashboard.
+
+https://user-images.githubusercontent.com/72497905/215062009-ff6e33ce-e29a-4978-98df-324dc9d6a496.mp4
+
+
 ## Air quality monitoring
+
+
 ## Flood management
 
 ## Developed with ❤️ by
