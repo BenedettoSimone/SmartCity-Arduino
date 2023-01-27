@@ -244,10 +244,14 @@ We connected each sensor to an Arduino WIFI REV 2.
 ## FINAL RESULT OF EACH SECTION
 
 ## Smart lighting
+Street lights use a photoresistor to capture the amount of light. At sunset the lights will turn on.
+
+https://user-images.githubusercontent.com/72497905/215066779-0dc2bd54-4a1f-4323-9e29-403fe8a0ca50.mp4
+
 
 
 ## Smart parking
-When the car attempts to enter the parking area, the bar will only open if there are spaces available. When the car occupies a certain slot it will be shown on the LED matrix which slot has been occupied.  During the procedure all information will be shown on the dashboard.
+When the car attempts to enter the parking area, the bar will only open if there are spaces available. When the car occupies a certain slot it will be shown on the LED matrix which slot has been occupied. During the procedure all information will be shown on the dashboard.
 
 https://user-images.githubusercontent.com/72497905/215062009-ff6e33ce-e29a-4978-98df-324dc9d6a496.mp4
 
