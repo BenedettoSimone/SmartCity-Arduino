@@ -15,7 +15,7 @@ void loop() {
   Serial.print(A0_value, DEC);
 
   //Low noise 
-  if(A0_value >550){
+  if(A0_value > 270){
     Serial.print(A0_value);
   }
 

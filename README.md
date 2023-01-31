@@ -235,7 +235,7 @@ The final result is showed in the next picture.
 <p align="center"><img src="./images/dashboard-deploy.png"/></p> 
 
 ## Step 4: Place all devices on the box model
-We connected each sensor to an Arduino WIFI REV 2. 
+We connected each sensor to an Arduino WIFI REV 2. The full code is in ``MainProgram``.
 <p align="center"><img src="./images/box_wiring.jpg"/></p>
 
 
@@ -258,13 +258,13 @@ https://user-images.githubusercontent.com/72497905/215062009-ff6e33ce-e29a-4978-
 
 ## Air quality monitoring
 
-
 https://user-images.githubusercontent.com/72497905/215070127-c38a5b98-5a0a-4aec-b4d0-cdd19695f3a9.mp4
 
 
 
 
 ## Flood management
+When the water level is too high, an motor is activated that drains the water in another place to prevent the city from flooding.
 
 ## Developed with ❤️ by
 [Simone Benedetto](https://github.com/BenedettoSimone)<br>

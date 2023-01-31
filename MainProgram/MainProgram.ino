@@ -3,21 +3,23 @@
 #include <PubSubClient.h>
 #include <Servo.h>
 
-/*
-const char* ssid = "TP-LINK_4C7972";
-const char* password = "47086364";
 
-const char* mqtt_server = "127.0.0.1";
+const char* ssid = "TIM-24763234";
+const char* password = "mebMUKzTex2sQyanB0FRl7rG";
+
+const char* mqtt_server = "192.168.1.218";
 const int mqtt_port = 1885; //default 1833 
-*/
 
-const char *topic_parking = "topic/parking";
 const char *topic_lights = "topic/street_lights";
 const char *topic_air = "topic/air_quality";
+const char *topic_flood = "topic/flood_management";
+const char *topic_parking = "topic/parking";
+
 
 String parkingMessage = "";
 String lightsMessage = "";
 String airMessage = "";
+String floodMessage = "";
 
 WiFiClient rev2Client; // WiFi client
 
@@ -49,7 +51,6 @@ Servo servo; //inizialize micro servo 9g
 const int numDevices = 1;
 LedControl lc = LedControl(11,13,10,numDevices);
 
-
 // pin to handle street lights
 const int LED_PIN_1 = 12;
 const int LED_PIN_2 = A4;
@@ -57,6 +58,17 @@ const int LED_PIN_2 = A4;
 //air quality sensor
 int airQualitySensor = A0;
 int air_value= 0;
+
+//------ flood management
+#define SIGNAL_PIN A5
+#define SENSOR_MIN 0
+#define SENSOR_MAX 521
+
+//PIN for water pump
+const int MOTOR_PIN = 8;
+
+int sensorValue = 0; // sensor value
+int waterLevel = 0; // water level
 
 void setup() {
   
@@ -81,7 +93,10 @@ void setup() {
   //attach led to pin 8 and 12
   pinMode(LED_PIN_1, OUTPUT);
   pinMode(LED_PIN_2, OUTPUT);
-/*
+
+  //configure motor pin
+  pinMode(MOTOR_PIN, OUTPUT);
+
 
   WiFi.begin(ssid, password);
   
@@ -103,14 +118,33 @@ void setup() {
   if (!client.connected()) {
     reconnect();
   }
-  */
+  
   
 }
 
 void loop() {
 
+  if (!client.connected()) {
+    reconnect();
+  }
 
-  /* PARKING BAR SECTION */
+  parking();
+  delay(200);
+  street_lights();
+  delay(200);
+  air_quality();
+  delay(200);
+  flood_management();
+  delay(200);
+  delay(1000);
+
+}
+
+
+
+// function to handle parking
+void parking(){
+/* PARKING BAR SECTION */
 
   // reads the input on analog pin A2 (value between 0 and 1023)
   int analogValueEntry = analogRead(A1);
@@ -149,13 +183,12 @@ void loop() {
     flag = 0;
   }
   
-
   
   /* PARKING SECTION */
 
   //parking space 1
   sensorOut1 = digitalRead(pir1);
-
+  
   if(sensorOut1==LOW){
     setPlace(1,true);
     Serial.println("Parking space 1 BUSY");
@@ -222,72 +255,11 @@ void loop() {
     Serial.println("Parking space 6 FREE");
   }
 
-  parkingMessage = "{\"free\":"+String(freeSlots)+", \"slot1\":"+String(sensorOut1)+", \"slot2\":"+String(sensorOut2)+", \"slot3\":"+String(sensorOut3)+", \"slot4\":"+String(sensorOut4)+", \"slot5\":"+String(sensorOut5)+", \"slot6\": "+String(sensorOut6)+"}";
-
+  parkingMessage = "{\"free\":"+String(freeSlots)+", \"slot1\":"+String(!sensorOut1)+", \"slot2\":"+String(!sensorOut2)+", \"slot3\":"+String(!sensorOut3)+", \"slot4\":"+String(!sensorOut4)+", \"slot5\":"+String(!sensorOut5)+", \"slot6\":"+String(!sensorOut6)+"}";
+  
+  Serial.println(freeSlots);
   sendMessage(topic_parking, parkingMessage);
-
-  
-  /* STREET LIGHTS SECTION */
-
-  // reads the input on analog pin A3 (value between 0 and 1023)
-  int analogValueLights = analogRead(A3);
-
-  Serial.println("Analog reading lights: ");
-  Serial.print(analogValueLights);   // the raw analog reading
-
-  if (analogValueLights < 200){
-    // Dark
-    digitalWrite(LED_PIN_1, HIGH);
-    analogWrite(LED_PIN_2, 255);
-    
-    lightsMessage = "{\"light_status\": 1}";
-  } else {
-    digitalWrite(LED_PIN_1, LOW);
-    analogWrite(LED_PIN_2, 0);
-    
-    lightsMessage = "{\"light_status\": 0}";
-  }
-
-  sendMessage(topic_lights, lightsMessage);
-
-  
-  
-  
-  /* AIR QUALITY SECTION */
-
-  air_value = analogRead(airQualitySensor);
-  Serial.print("\nAir Quality: ");
-  Serial.print(air_value, DEC);
-
-  //Low noise 
-  if(air_value >550){
-    airMessage = "{\"air_quality_status\": BAD}";
-  }else{
-    airMessage = "{\"air_quality_status\": GOOD}";
-  }
-
-  sendMessage(topic_air, airMessage);
-
-
-
-  
-
-  delay(500);
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //funtion to show on led matrix the status of each parking space
@@ -325,13 +297,81 @@ void setPlace(int number, boolean state){
   lc.setLed(0,row+1,column+2,state);
 }
 
+//function to handle street lights
+void street_lights(){
+
+  /* STREET LIGHTS SECTION */
+
+  // reads the input on analog pin A3 (value between 0 and 1023)
+  int analogValueLights = analogRead(A3);
+
+  Serial.print("Analog reading lights: ");
+  Serial.println(analogValueLights);   // the raw analog reading
+
+  if (analogValueLights < 200){
+    // Dark
+    digitalWrite(LED_PIN_1, HIGH);
+    analogWrite(LED_PIN_2, 255);
+    
+    lightsMessage = "{\"lights_status\": 1}";
+  } else {
+    digitalWrite(LED_PIN_1, LOW);
+    analogWrite(LED_PIN_2, 0);
+    
+    lightsMessage = "{\"lights_status\": 0}";
+  }
+
+  sendMessage(topic_lights, lightsMessage);
+}
+
+
+// function to handle air quality
+void air_quality(){
+  /* AIR QUALITY SECTION */
+
+  air_value = analogRead(airQualitySensor);
+  Serial.print("\nAir Quality: ");
+  Serial.println(air_value, DEC);
+
+   
+  if(air_value > 270){
+    //BAD
+    airMessage = "{\"air_quality_status\": 1}";
+  }else{
+    //GOOD    
+    airMessage = "{\"air_quality_status\": 0}";
+  }
+
+  sendMessage(topic_air, airMessage);
+}
+
+void flood_management(){
+  /* FLOOD MANAGEMENT SECTION */
+
+  sensorValue = analogRead(SIGNAL_PIN); // read the analog value from sensor
+
+  waterLevel = map(sensorValue, SENSOR_MIN, SENSOR_MAX, 0, 4); // we divide the height of the sensor in 4 parts
+  Serial.print("Water level: ");
+  Serial.println(waterLevel);
+
+  floodMessage = "{\"flood_status\":"+String(waterLevel)+"}";
+
+  sendMessage(topic_flood, floodMessage);
+
+  if (waterLevel > 1){
+    digitalWrite(MOTOR_PIN, HIGH); // turn the water pump ON
+  }else{
+    digitalWrite(MOTOR_PIN, LOW); // turn the water pump OFF
+  } 
+
+}
 
 // publish message
-void sendMessage(char *topic, String str){
+void sendMessage(char *topic_m, String str){
     int str_len = str.length() + 1;
     char char_array[str_len]; 
     str.toCharArray(char_array, str_len); 
-    //boolean rc = client.publish(topic,char_array);
+    boolean rc = client.publish(topic_m ,char_array);
 }
 
 

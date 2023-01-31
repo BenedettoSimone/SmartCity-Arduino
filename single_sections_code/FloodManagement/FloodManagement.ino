@@ -22,8 +22,7 @@ void loop() {
   Serial.print("Water level: ");
   Serial.println(waterLevel);
 
-  if (waterLevel > 3){
-
+  if (waterLevel > 1){
     digitalWrite(MOTOR_PIN, HIGH); // turn the water pump ON
   }else{
     digitalWrite(MOTOR_PIN, LOW); // turn the water pump OFF
