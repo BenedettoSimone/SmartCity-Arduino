@@ -1,6 +1,6 @@
 [
     {
-        "id": "10ce1f8da253449d",
+        "id": "3ab5da6c12cb9737",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
@@ -8,9 +8,9 @@
         "env": []
     },
     {
-        "id": "33c190412d325ecc",
+        "id": "68369e37ae309b51",
         "type": "mqtt in",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "name": "",
         "topic": "topic/street_lights",
         "qos": "2",
@@ -24,15 +24,15 @@
         "y": 120,
         "wires": [
             [
-                "f6ba121bb57414de",
-                "243e1f5fe9963fae"
+                "e32a3e40cfb083eb",
+                "58dbf0d21b64c02a"
             ]
         ]
     },
     {
-        "id": "ba2927a9d09b372c",
+        "id": "271d62363508dfa3",
         "type": "mqtt in",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "name": "",
         "topic": "topic/parking",
         "qos": "2",
@@ -46,15 +46,15 @@
         "y": 240,
         "wires": [
             [
-                "064693f437b4bbde",
-                "2cfdbb206d028ca3"
+                "e2655defaad9d94b",
+                "99adbba47ce767bf"
             ]
         ]
     },
     {
-        "id": "12ebd070d3a1b3df",
+        "id": "489e71230610f6c4",
         "type": "mqtt in",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "name": "",
         "topic": "topic/air_quality",
         "qos": "2",
@@ -68,15 +68,15 @@
         "y": 360,
         "wires": [
             [
-                "7b65f086f9d5effd",
-                "0f96793b20dd8030"
+                "954236a9945a2913",
+                "fed2916df76677cb"
             ]
         ]
     },
     {
-        "id": "5dc33e0a228d481a",
+        "id": "4bbd0a13a26aa54a",
         "type": "mqtt in",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "name": "",
         "topic": "topic/flood_management",
         "qos": "2",
@@ -90,15 +90,15 @@
         "y": 480,
         "wires": [
             [
-                "c4c1beb417951fa4",
-                "f8db7b0271138764"
+                "af1ff6b085ec4a83",
+                "7c2a77a314df9df6"
             ]
         ]
     },
     {
-        "id": "27248ebee658279c",
+        "id": "9194e3ca1f2995ed",
         "type": "ui_template",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "group": "160099062e2ed27a",
         "name": "custom_template",
         "order": 2,
@@ -117,15 +117,15 @@
         ]
     },
     {
-        "id": "f6ba121bb57414de",
+        "id": "e32a3e40cfb083eb",
         "type": "ui_template",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "group": "160099062e2ed27a",
         "name": "street_lights_template",
         "order": 1,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    #lights_card {\n        background-repeat: no-repeat !important;\n        background-size: cover !important;\n        background-position: right !important;\n    }\n</style>\n\n<div id=\"lights_card\" class=\"custom_card\" style=\"background:url({{msg.payload.lights_status === 1 ?\n'https://raw.githubusercontent.com/BenedettoSimone/SmartCity-Arduino/main/dashboard_images/street_lamp_night.jpg' :\n'https://raw.githubusercontent.com/BenedettoSimone/SmartCity-Arduino/main/dashboard_images/street_lamp_day.jpg'}})\">\n\n    <h1>{{msg.payload.lights_status === 1 ? 'ON' : 'OFF'}}</h1>\n</div>",
+        "format": "<style>\n    #lights_card {\n        background-repeat: no-repeat !important;\n        background-size: cover !important;\n        background-position: right !important;\n    }\n</style>\n\n<div id=\"lights_card\" class=\"custom_card\" style=\"background:url({{msg.payload.lights_status === 1 ?\n'/street_lamp_night.jpg' :\n'/street_lamp_day.jpg'}})\">\n\n    <h1>{{msg.payload.lights_status === 1 ? 'ON' : 'OFF'}}</h1>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -138,15 +138,15 @@
         ]
     },
     {
-        "id": "7b65f086f9d5effd",
+        "id": "954236a9945a2913",
         "type": "ui_template",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "group": "0c22cea565f7165d",
         "name": "air_quality_template",
         "order": 1,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    #air_quality_card {\n        background-repeat: no-repeat !important;\n        background-size: 150% 150% !important;\n        background-position: right bottom!important;\n    }\n</style>\n\n<div id=\"air_quality_card\" class=\"custom_card\" style=\"background:url({{msg.payload.air_quality_status === 1 ?\n'https://raw.githubusercontent.com/BenedettoSimone/SmartCity-Arduino/main/dashboard_images/air_quality_bad.jpg' :\n'https://raw.githubusercontent.com/BenedettoSimone/SmartCity-Arduino/main/dashboard_images/air_quality_good.jpg'}})\">\n    <h1>{{msg.payload.air_quality_status === 1 ? 'BAD' : 'GOOD'}}</h1>\n</div>",
+        "format": "<style>\n    #air_quality_card {\n        background-repeat: no-repeat !important;\n        background-size: 150% 150% !important;\n        background-position: right bottom!important;\n    }\n</style>\n\n<div id=\"air_quality_card\" class=\"custom_card\" style=\"background:url({{msg.payload.air_quality_status === 1 ?\n'/air_quality_bad.jpg' :\n'/air_quality_good.jpg'}})\">\n    <h1>{{msg.payload.air_quality_status === 1 ? 'BAD' : 'GOOD'}}</h1>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -159,15 +159,15 @@
         ]
     },
     {
-        "id": "c4c1beb417951fa4",
+        "id": "af1ff6b085ec4a83",
         "type": "ui_template",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "group": "3efd1501e5a7aac4",
         "name": "flood_management_template",
         "order": 1,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    #flood_management_card {\n        background-repeat: no-repeat !important;\n        background-position: center -21px !important;\n        background-size: 140% 140% !important;\n}\n    }\n</style>\n\n<div id=\"flood_management_card\" class=\"custom_card\" style=\"background:url(https://raw.githubusercontent.com/BenedettoSimone/SmartCity-Arduino/main/dashboard_images/flood_management.jpg)\">\n    <h1>{{msg.payload.flood_status}}</h1>\n</div>\n\n",
+        "format": "<style>\n    #flood_management_card {\n        background-repeat: no-repeat !important;\n        background-position: center -21px !important;\n        background-size: 140% 140% !important;\n}\n    }\n</style>\n\n<div id=\"flood_management_card\" class=\"custom_card\" style=\"background:url(/flood_management.jpg)\">\n    <h1>{{msg.payload.flood_status}}</h1>\n</div>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -180,15 +180,15 @@
         ]
     },
     {
-        "id": "2cfdbb206d028ca3",
+        "id": "99adbba47ce767bf",
         "type": "ui_template",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "group": "79220384135d18f7",
         "name": "parking_template",
         "order": 2,
         "width": 6,
         "height": 1,
-        "format": "<style>\n\n    #parking_card {\n            background: linear-gradient(#0C5794, #032D5A);;\n            height: 410px !important;\n    }\n\n    #parking_slots {\n        display: flex !important;\n        flex-wrap: wrap !important;\n        justify-content: center !important;\n        gap: 20px 80px !important;\n        margin-top: 40px !important;\n    }\n    \n    /* single card */\n    .slot{\n        width: 300px !important;\n        height: 70px !important;\n        border-radius: 15px !important;\n        display: flex !important;\n        justify-content: center !important;\n        align-items: center !important;\n        color: #ffffff !important;\n        font-weight: bold !important;\n    }\n\n    .slot_status_free{\n        background-color: #48F277 !important;\n    }\n\n    .slot_status_busy{\n        background-color: #F24848 !important;\n    }\n\n    @media screen and (max-width: 977px) {\n        .slot {\n            width: 200px !important;\n        }\n    }\n\n    @media screen and (max-width: 653px) {\n    \n        #parking_slots {\n            display: flex !important;\n            flex-wrap: wrap !important;\n            justify-content: center !important;\n            gap: 20px 20px !important;\n            margin-top: 40px !important;\n        }\n\n        .slot {\n            width: 100px !important;\n        }\n    }\n</style>\n\n<div id=\"parking_card\" class=\"custom_card\">\n<h1>FREE SLOTS: {{msg.payload.free}}</h1>\n\n    <div id=\"parking_slots\">\n        <div class=\"slot {{msg.payload.slot1 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\" >SLOT 1</div>\n        <div class=\"slot {{msg.payload.slot2 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 2</div>\n        <div class=\"slot {{msg.payload.slot3 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 3</div>\n        <div class=\"slot {{msg.payload.slot4 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 4</div>\n        <div class=\"slot {{msg.payload.slot5 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 5</div>\n        <div class=\"slot {{msg.payload.slot6 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 6</div>\n    </div>\n\n    \n</div>\n\n",
+        "format": "<style>\n\n    #parking_card {\n            background: linear-gradient(#0C5794, #032D5A);;\n            height: 410px !important;\n    }\n\n    #parking_slots {\n        display: flex !important;\n        flex-wrap: wrap !important;\n        justify-content: center !important;\n        gap: 20px 80px !important;\n        margin-top: 40px !important;\n    }\n    \n    /* single card */\n    .slot{\n        width: 300px !important;\n        height: 70px !important;\n        border-radius: 15px !important;\n        display: flex !important;\n        justify-content: center !important;\n        align-items: center !important;\n        color: #ffffff !important;\n        font-weight: bold !important;\n    }\n\n    .slot_status_free{\n        background-color: #48F277 !important;\n    }\n\n    .slot_status_busy{\n        background-color: #F24848 !important;\n    }\n\n    @media screen and (max-width: 977px) {\n        .slot {\n            width: 200px !important;\n        }\n    }\n\n    @media screen and (max-width: 653px) {\n    \n        #parking_slots {\n            display: flex !important;\n            flex-wrap: wrap !important;\n            justify-content: center !important;\n            gap: 20px 20px !important;\n            margin-top: 40px !important;\n        }\n\n        .slot {\n            width: 100px !important;\n        }\n    }\n</style>\n\n<div id=\"parking_card\" class=\"custom_card\">\n<h1>FREE SLOTS: {{msg.payload.free}}</h1>\n\n    <div id=\"parking_slots\">\n        <div class=\"slot {{msg.payload.slot4 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 4</div>\n        <div class=\"slot {{msg.payload.slot1 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 1</div>\n        <div class=\"slot {{msg.payload.slot5 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 5</div>\n        <div class=\"slot {{msg.payload.slot2 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 2</div>\n        <div class=\"slot {{msg.payload.slot6 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 6</div>\n        <div class=\"slot {{msg.payload.slot3 === 1 ? 'slot_status_busy' : 'slot_status_free'}}\">SLOT 3</div>\n    </div>\n\n    \n</div>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -201,9 +201,9 @@
         ]
     },
     {
-        "id": "243e1f5fe9963fae",
+        "id": "58dbf0d21b64c02a",
         "type": "debug",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "name": "debug_street_lights",
         "active": true,
         "tosidebar": true,
@@ -218,9 +218,9 @@
         "wires": []
     },
     {
-        "id": "064693f437b4bbde",
+        "id": "e2655defaad9d94b",
         "type": "debug",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "name": "debug_parking",
         "active": true,
         "tosidebar": true,
@@ -235,9 +235,9 @@
         "wires": []
     },
     {
-        "id": "0f96793b20dd8030",
+        "id": "fed2916df76677cb",
         "type": "debug",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "name": "debug_air_quality",
         "active": true,
         "tosidebar": true,
@@ -252,9 +252,9 @@
         "wires": []
     },
     {
-        "id": "f8db7b0271138764",
+        "id": "7c2a77a314df9df6",
         "type": "debug",
-        "z": "10ce1f8da253449d",
+        "z": "3ab5da6c12cb9737",
         "name": "debug_flood_management",
         "active": true,
         "tosidebar": true,
