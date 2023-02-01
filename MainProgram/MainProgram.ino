@@ -4,10 +4,10 @@
 #include <Servo.h>
 
 
-const char* ssid = "TIM-24763234";
-const char* password = "mebMUKzTex2sQyanB0FRl7rG";
+const char* ssid = "WiFi-LabIoT";
+const char* password = "s1jzsjkw5b";
 
-const char* mqtt_server = "192.168.1.218";
+const char* mqtt_server = "192.168.1.121";
 const int mqtt_port = 1885; //default 1833 
 
 const char *topic_lights = "topic/street_lights";
