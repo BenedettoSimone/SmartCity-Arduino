@@ -31,7 +31,7 @@ Each feature will be explained in the dedicated sections.
 
 
 ## Getting started 🚀
-Since our smart sensors can communicate, using MQTT, with a web-application built with Node-Red, we need to setup the enviroment. In our project we used a RaspberryPi 3 to host the MQTT broker and the web-application, but it's possible also to host them on your pc.
+Since our smart sensors can communicate, using MQTT, with a web-application built with Node-Red, we need to setup the enviroment. In our project we used a RaspberryPi 3 to host the MQTT broker and Node-Red, but it's possible also to host them on your pc.
 
 ## 1. Host over RaspberryPi 3
 As first step you need to do the initial setup for the RaspberryPi.
