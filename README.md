@@ -9,6 +9,8 @@ This project treats the development of an IoT smart city using Arduino. The smar
 - Flood management;
 
 Each feature will be explained in the dedicated sections.
+## Architecture
+<p align="center"><img src="./images/architecture.png"/></p>
 
 ## Table of contents
 * [Getting started](#getting-started-)
